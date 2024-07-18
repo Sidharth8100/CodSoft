@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+int main (){
+//number guessing game by Sidharth Bhagat
+  int number, guess, n=1;
+  srand (time(0)) ;
+     number=rand()%100 +1;
+   cout<<" Guess a number to start the game (1-100) -> ";
+	cin>>guess;
+  while (number != guess)
+    {
+      
+	if (number > guess)
+	{
+	  cout<<" Enter a greater number -> ";
+	  cin>>guess;
+	}
+      else if (guess > number)
+	{
+	cout<<" Enter a smaller number -> ";
+	cin>>guess;}
+      else
+	{
+	cout<<" you guessed it correct\n";
+  }
+    n++;}
+    cout<<" the number of tries you took is "<< n;
+  return 0;
+}
+
